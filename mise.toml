@@ -4,14 +4,39 @@ min_version = "2026.9.17"
 task.run_auto_install = false
 
 [tools]
-actionlint = "latest"
+# tools to check
+act3 = "2.0.0"
+bmm = "0.3.1"
 envee = "0.1.0-alpha.2"
+grafq = "0.2.0"
+hours = "0.6.0"
+kplay = "3.1.0"
+mrj = "0.5.0"
+mult = "0.3.1"
+omm = "0.7.0"
 punchout = "1.5.0"
+tflens = "0.1.0-alpha.8"
+ting = "0.1.1"
+unreleased = "0.1.1"
+
+# repo tools
+actionlint = "latest"
 yamlfmt = "latest"
 
 [tool_alias]
+act3 = "github:dhth/act3"
+bmm = "github:dhth/bmm"
 envee = "github:dhth/envee"
+grafq = "github:dhth/grafq"
+hours = "github:dhth/hours"
+kplay = "github:dhth/kplay"
+mrj = "github:dhth/mrj"
+mult = "github:dhth/mult"
+omm = "github:dhth/omm"
 punchout = "github:dhth/punchout"
+tflens = "github:dhth/tflens"
+ting = "github:dhth/ting"
+unreleased = "github:dhth/unreleased"
 
 [tasks."lint:actions"]
 description = "Lint GitHub Actions workflows"

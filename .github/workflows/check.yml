@@ -9,8 +9,19 @@ on:
         default: all
         options:
           - all
+          - act3
+          - bmm
           - envee
+          - grafq
+          - hours
+          - kplay
+          - mrj
+          - mult
+          - omm
           - punchout
+          - tflens
+          - ting
+          - unreleased
 
 permissions:
   contents: read
@@ -43,6 +54,12 @@ jobs:
       matrix:
         tool: ${{ fromJSON(needs.plan.outputs.tools) }}
         os: [ubuntu-latest, ubuntu-24.04-arm, ubuntu-22.04, ubuntu-22.04-arm, macos-latest]
+        exclude:
+          # ting has no linux arm64 release assets yet
+          - tool: ting
+            os: ubuntu-24.04-arm
+          - tool: ting
+            os: ubuntu-22.04-arm
     runs-on: ${{ matrix.os }}
     timeout-minutes: 5
     steps:

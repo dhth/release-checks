@@ -2,6 +2,41 @@
 
 lockfile_version = 3
 
+[[tools.act3]]
+version = "2.0.0"
+backend = "github:dhth/act3"
+specifiers = ["2.0.0"]
+
+[tools.act3."platforms.linux-arm64"]
+checksum = "sha256:c2c3bab9097a91a29daf376db0d65498db2f47cf60d270eaa06a6da495c15d52"
+url = "https://github.com/dhth/act3/releases/download/v2.0.0/act3_2.0.0_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/dhth/act3/releases/assets/264423980"
+
+[tools.act3."platforms.linux-arm64-musl"]
+checksum = "sha256:c2c3bab9097a91a29daf376db0d65498db2f47cf60d270eaa06a6da495c15d52"
+url = "https://github.com/dhth/act3/releases/download/v2.0.0/act3_2.0.0_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/dhth/act3/releases/assets/264423980"
+
+[tools.act3."platforms.linux-x64"]
+checksum = "sha256:d18e9590cb08390442b5e97bfeb148cee6686f829e788fc8f9395148ce192642"
+url = "https://github.com/dhth/act3/releases/download/v2.0.0/act3_2.0.0_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/dhth/act3/releases/assets/264423975"
+
+[tools.act3."platforms.linux-x64-musl"]
+checksum = "sha256:d18e9590cb08390442b5e97bfeb148cee6686f829e788fc8f9395148ce192642"
+url = "https://github.com/dhth/act3/releases/download/v2.0.0/act3_2.0.0_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/dhth/act3/releases/assets/264423975"
+
+[tools.act3."platforms.macos-arm64"]
+checksum = "sha256:cbbb7bbcac3933372089b5b1c9d8547a39fb7049f31c137e7b5ff838498a6c05"
+url = "https://github.com/dhth/act3/releases/download/v2.0.0/act3_2.0.0_darwin_arm64.tar.gz"
+url_api = "https://api.github.com/repos/dhth/act3/releases/assets/264423976"
+
+[tools.act3."platforms.macos-x64"]
+checksum = "sha256:af47924c00c5f1ca8f22b8e21cd8f5b71dbdee334cc1552a498a0593f1596c43"
+url = "https://github.com/dhth/act3/releases/download/v2.0.0/act3_2.0.0_darwin_amd64.tar.gz"
+url_api = "https://api.github.com/repos/dhth/act3/releases/assets/264423977"
+
 [[tools.actionlint]]
 version = "1.7.12"
 backend = "aqua:rhysd/actionlint"
@@ -43,6 +78,47 @@ url = "https://github.com/rhysd/actionlint/releases/download/v1.7.12/actionlint_
 url_api = "https://api.github.com/repos/rhysd/actionlint/releases/assets/384924880"
 provenance = "github-attestations"
 
+[[tools.bmm]]
+version = "0.3.1"
+backend = "github:dhth/bmm"
+specifiers = ["0.3.1"]
+
+[tools.bmm."platforms.linux-arm64"]
+checksum = "sha256:9f55e1279e2641897c0735a5a69cf953cab0e830fc6642e6ba0862026775ff20"
+url = "https://github.com/dhth/bmm/releases/download/v0.3.1/bmm-aarch64-unknown-linux-gnu.tar.xz"
+url_api = "https://api.github.com/repos/dhth/bmm/releases/assets/421736748"
+provenance = "github-attestations"
+
+[tools.bmm."platforms.linux-arm64-musl"]
+checksum = "sha256:9f55e1279e2641897c0735a5a69cf953cab0e830fc6642e6ba0862026775ff20"
+url = "https://github.com/dhth/bmm/releases/download/v0.3.1/bmm-aarch64-unknown-linux-gnu.tar.xz"
+url_api = "https://api.github.com/repos/dhth/bmm/releases/assets/421736748"
+provenance = "github-attestations"
+
+[tools.bmm."platforms.linux-x64"]
+checksum = "sha256:fa61f38ee59a728cfe2ae4e0a2c5b29408cc99132f4b6edb456b622d4d049641"
+url = "https://github.com/dhth/bmm/releases/download/v0.3.1/bmm-x86_64-unknown-linux-gnu.tar.xz"
+url_api = "https://api.github.com/repos/dhth/bmm/releases/assets/421736762"
+provenance = "github-attestations"
+
+[tools.bmm."platforms.linux-x64-musl"]
+checksum = "sha256:e6f8ece84cd4dbeb4fd6343f09d3c59529fab9740cd9409cc75d0a6c035631a0"
+url = "https://github.com/dhth/bmm/releases/download/v0.3.1/bmm-x86_64-unknown-linux-musl.tar.xz"
+url_api = "https://api.github.com/repos/dhth/bmm/releases/assets/421736764"
+provenance = "github-attestations"
+
+[tools.bmm."platforms.macos-arm64"]
+checksum = "sha256:55639374f14ef8133682658adced2355aa0a1ce553f5f2689c427e15945fa72c"
+url = "https://github.com/dhth/bmm/releases/download/v0.3.1/bmm-aarch64-apple-darwin.tar.xz"
+url_api = "https://api.github.com/repos/dhth/bmm/releases/assets/421736749"
+provenance = "github-attestations"
+
+[tools.bmm."platforms.macos-x64"]
+checksum = "sha256:2a2d6d7bc9107e5bf68b5d63898078425e9ea915057c1e4c32c0a209788ae2fb"
+url = "https://github.com/dhth/bmm/releases/download/v0.3.1/bmm-x86_64-apple-darwin.tar.xz"
+url_api = "https://api.github.com/repos/dhth/bmm/releases/assets/421736761"
+provenance = "github-attestations"
+
 [[tools.envee]]
 version = "0.1.0-alpha.2"
 backend = "github:dhth/envee"
@@ -78,6 +154,211 @@ checksum = "sha256:734ad5c44014f9378f38258a925aa647178e6d423b3692f4f9526a224ecb5
 url = "https://github.com/dhth/envee/releases/download/v0.1.0-alpha.2/envee-x86_64-apple-darwin.tar.xz"
 url_api = "https://api.github.com/repos/dhth/envee/releases/assets/599232338"
 
+[[tools.grafq]]
+version = "0.2.0"
+backend = "github:dhth/grafq"
+specifiers = ["0.2.0"]
+
+[tools.grafq."platforms.linux-arm64"]
+checksum = "sha256:ce94531042a96d7addcfa7f7fcb2d92668e57dcdad09240a171b84b7500c06c6"
+url = "https://github.com/dhth/grafq/releases/download/v0.2.0/grafq-aarch64-unknown-linux-gnu.tar.xz"
+url_api = "https://api.github.com/repos/dhth/grafq/releases/assets/420864506"
+provenance = "github-attestations"
+
+[tools.grafq."platforms.linux-arm64-musl"]
+checksum = "sha256:ce94531042a96d7addcfa7f7fcb2d92668e57dcdad09240a171b84b7500c06c6"
+url = "https://github.com/dhth/grafq/releases/download/v0.2.0/grafq-aarch64-unknown-linux-gnu.tar.xz"
+url_api = "https://api.github.com/repos/dhth/grafq/releases/assets/420864506"
+provenance = "github-attestations"
+
+[tools.grafq."platforms.linux-x64"]
+checksum = "sha256:01091d0480397905188467278571a04872a2c58ec0acf38a2b2905006125dc9a"
+url = "https://github.com/dhth/grafq/releases/download/v0.2.0/grafq-x86_64-unknown-linux-gnu.tar.xz"
+url_api = "https://api.github.com/repos/dhth/grafq/releases/assets/420864515"
+provenance = "github-attestations"
+
+[tools.grafq."platforms.linux-x64-musl"]
+checksum = "sha256:01091d0480397905188467278571a04872a2c58ec0acf38a2b2905006125dc9a"
+url = "https://github.com/dhth/grafq/releases/download/v0.2.0/grafq-x86_64-unknown-linux-gnu.tar.xz"
+url_api = "https://api.github.com/repos/dhth/grafq/releases/assets/420864515"
+provenance = "github-attestations"
+
+[tools.grafq."platforms.macos-arm64"]
+checksum = "sha256:1858a5da428bc3d0d83ed76f224a17fa9243e3388339c8588d2d570e6b1feb7d"
+url = "https://github.com/dhth/grafq/releases/download/v0.2.0/grafq-aarch64-apple-darwin.tar.xz"
+url_api = "https://api.github.com/repos/dhth/grafq/releases/assets/420864507"
+provenance = "github-attestations"
+
+[[tools.hours]]
+version = "0.6.0"
+backend = "github:dhth/hours"
+specifiers = ["0.6.0"]
+
+[tools.hours."platforms.linux-arm64"]
+checksum = "sha256:dceace8bcdab8baec65b38709df688eb35b166ba51f757f67976c08130531c1d"
+url = "https://github.com/dhth/hours/releases/download/v0.6.0/hours_0.6.0_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/dhth/hours/releases/assets/283725063"
+
+[tools.hours."platforms.linux-arm64-musl"]
+checksum = "sha256:dceace8bcdab8baec65b38709df688eb35b166ba51f757f67976c08130531c1d"
+url = "https://github.com/dhth/hours/releases/download/v0.6.0/hours_0.6.0_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/dhth/hours/releases/assets/283725063"
+
+[tools.hours."platforms.linux-x64"]
+checksum = "sha256:f4971c92a17919c3a16e77796e41af829736c837f7cf85154f7549d154b998ca"
+url = "https://github.com/dhth/hours/releases/download/v0.6.0/hours_0.6.0_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/dhth/hours/releases/assets/283725060"
+
+[tools.hours."platforms.linux-x64-musl"]
+checksum = "sha256:f4971c92a17919c3a16e77796e41af829736c837f7cf85154f7549d154b998ca"
+url = "https://github.com/dhth/hours/releases/download/v0.6.0/hours_0.6.0_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/dhth/hours/releases/assets/283725060"
+
+[tools.hours."platforms.macos-arm64"]
+checksum = "sha256:daf3da450ec8435099b02a57125cd8eed327f25d422fc3ae091d4f4235636fc7"
+url = "https://github.com/dhth/hours/releases/download/v0.6.0/hours_0.6.0_darwin_arm64.tar.gz"
+url_api = "https://api.github.com/repos/dhth/hours/releases/assets/283725061"
+
+[tools.hours."platforms.macos-x64"]
+checksum = "sha256:c313be15a69070876e89a0332dcfd36e843e4b9f162cffeb0e46d96d6104cd0d"
+url = "https://github.com/dhth/hours/releases/download/v0.6.0/hours_0.6.0_darwin_amd64.tar.gz"
+url_api = "https://api.github.com/repos/dhth/hours/releases/assets/283725062"
+
+[[tools.kplay]]
+version = "3.1.0"
+backend = "github:dhth/kplay"
+specifiers = ["3.1.0"]
+
+[tools.kplay."platforms.linux-arm64"]
+checksum = "sha256:b754a0431056146a4dd0d5479caf3489121d7106460bde8a2904251cab5f7add"
+url = "https://github.com/dhth/kplay/releases/download/v3.1.0/kplay_3.1.0_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/dhth/kplay/releases/assets/297505349"
+
+[tools.kplay."platforms.linux-arm64-musl"]
+checksum = "sha256:b754a0431056146a4dd0d5479caf3489121d7106460bde8a2904251cab5f7add"
+url = "https://github.com/dhth/kplay/releases/download/v3.1.0/kplay_3.1.0_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/dhth/kplay/releases/assets/297505349"
+
+[tools.kplay."platforms.linux-x64"]
+checksum = "sha256:40b750f1dd2ebbfc887505e4394ee29e594488fb607c48c1910e2cddb79c4f11"
+url = "https://github.com/dhth/kplay/releases/download/v3.1.0/kplay_3.1.0_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/dhth/kplay/releases/assets/297505347"
+
+[tools.kplay."platforms.linux-x64-musl"]
+checksum = "sha256:40b750f1dd2ebbfc887505e4394ee29e594488fb607c48c1910e2cddb79c4f11"
+url = "https://github.com/dhth/kplay/releases/download/v3.1.0/kplay_3.1.0_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/dhth/kplay/releases/assets/297505347"
+
+[tools.kplay."platforms.macos-arm64"]
+checksum = "sha256:17100ed84161d07debaf913255a902902c48f5718234bd81d4016a38bdffcf45"
+url = "https://github.com/dhth/kplay/releases/download/v3.1.0/kplay_3.1.0_darwin_arm64.tar.gz"
+url_api = "https://api.github.com/repos/dhth/kplay/releases/assets/297505346"
+
+[tools.kplay."platforms.macos-x64"]
+checksum = "sha256:f23e96799c01b76b203d8636cab8b940fb500da7a47229140964409538f0c7c9"
+url = "https://github.com/dhth/kplay/releases/download/v3.1.0/kplay_3.1.0_darwin_amd64.tar.gz"
+url_api = "https://api.github.com/repos/dhth/kplay/releases/assets/297505348"
+
+[[tools.mrj]]
+version = "0.5.0"
+backend = "github:dhth/mrj"
+specifiers = ["0.5.0"]
+
+[tools.mrj."platforms.linux-arm64"]
+checksum = "sha256:1ec2bc54c54079e221a0342390060d3bd6d1ca6216815192ee35f7c06fb60089"
+url = "https://github.com/dhth/mrj/releases/download/v0.5.0/mrj-aarch64-unknown-linux-gnu.tar.xz"
+url_api = "https://api.github.com/repos/dhth/mrj/releases/assets/432798048"
+
+[tools.mrj."platforms.linux-arm64-musl"]
+checksum = "sha256:1ec2bc54c54079e221a0342390060d3bd6d1ca6216815192ee35f7c06fb60089"
+url = "https://github.com/dhth/mrj/releases/download/v0.5.0/mrj-aarch64-unknown-linux-gnu.tar.xz"
+url_api = "https://api.github.com/repos/dhth/mrj/releases/assets/432798048"
+
+[tools.mrj."platforms.linux-x64"]
+checksum = "sha256:0d0678102faf3757c7d8eee5dba1b74cc8716b6800f99d67329c92dc57d7caa9"
+url = "https://github.com/dhth/mrj/releases/download/v0.5.0/mrj-x86_64-unknown-linux-gnu.tar.xz"
+url_api = "https://api.github.com/repos/dhth/mrj/releases/assets/432798053"
+
+[tools.mrj."platforms.linux-x64-musl"]
+checksum = "sha256:0d0678102faf3757c7d8eee5dba1b74cc8716b6800f99d67329c92dc57d7caa9"
+url = "https://github.com/dhth/mrj/releases/download/v0.5.0/mrj-x86_64-unknown-linux-gnu.tar.xz"
+url_api = "https://api.github.com/repos/dhth/mrj/releases/assets/432798053"
+
+[tools.mrj."platforms.macos-arm64"]
+checksum = "sha256:7f522bf1e277ae6868aef60299d7d6e65f99fc03850c5bd332b80f845b80533f"
+url = "https://github.com/dhth/mrj/releases/download/v0.5.0/mrj-aarch64-apple-darwin.tar.xz"
+url_api = "https://api.github.com/repos/dhth/mrj/releases/assets/432798050"
+
+[[tools.mult]]
+version = "0.3.1"
+backend = "github:dhth/mult"
+specifiers = ["0.3.1"]
+
+[tools.mult."platforms.linux-arm64"]
+checksum = "sha256:582edd1848a744fe1f58ded26f51597a7b4bcba647998cf204b251bdc9f73c62"
+url = "https://github.com/dhth/mult/releases/download/v0.3.1/mult_0.3.1_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/dhth/mult/releases/assets/545964869"
+
+[tools.mult."platforms.linux-arm64-musl"]
+checksum = "sha256:582edd1848a744fe1f58ded26f51597a7b4bcba647998cf204b251bdc9f73c62"
+url = "https://github.com/dhth/mult/releases/download/v0.3.1/mult_0.3.1_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/dhth/mult/releases/assets/545964869"
+
+[tools.mult."platforms.linux-x64"]
+checksum = "sha256:5e57dd337c44765c9d10afa4705228c69e2c66af438d88a940f366185fcbcf64"
+url = "https://github.com/dhth/mult/releases/download/v0.3.1/mult_0.3.1_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/dhth/mult/releases/assets/545964868"
+
+[tools.mult."platforms.linux-x64-musl"]
+checksum = "sha256:5e57dd337c44765c9d10afa4705228c69e2c66af438d88a940f366185fcbcf64"
+url = "https://github.com/dhth/mult/releases/download/v0.3.1/mult_0.3.1_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/dhth/mult/releases/assets/545964868"
+
+[tools.mult."platforms.macos-arm64"]
+checksum = "sha256:e16a5185e76ccb12a92d044e5305b455f112dc8e460ae2a9e7a00ea5c2942601"
+url = "https://github.com/dhth/mult/releases/download/v0.3.1/mult_0.3.1_darwin_arm64.tar.gz"
+url_api = "https://api.github.com/repos/dhth/mult/releases/assets/545964870"
+
+[tools.mult."platforms.macos-x64"]
+checksum = "sha256:4e80b14e783c48ebc9bf833edf5462c3f7f1d68bf90cdfa64be9c132e91af163"
+url = "https://github.com/dhth/mult/releases/download/v0.3.1/mult_0.3.1_darwin_amd64.tar.gz"
+url_api = "https://api.github.com/repos/dhth/mult/releases/assets/545964871"
+
+[[tools.omm]]
+version = "0.7.0"
+backend = "github:dhth/omm"
+specifiers = ["0.7.0"]
+
+[tools.omm."platforms.linux-arm64"]
+checksum = "sha256:377296286d6cb771fb402dfff9295ed28bf9b1d5b945881e40564f68ab133e9a"
+url = "https://github.com/dhth/omm/releases/download/v0.7.0/omm_0.7.0_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/dhth/omm/releases/assets/368245224"
+
+[tools.omm."platforms.linux-arm64-musl"]
+checksum = "sha256:377296286d6cb771fb402dfff9295ed28bf9b1d5b945881e40564f68ab133e9a"
+url = "https://github.com/dhth/omm/releases/download/v0.7.0/omm_0.7.0_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/dhth/omm/releases/assets/368245224"
+
+[tools.omm."platforms.linux-x64"]
+checksum = "sha256:95f6e51ecff1bddc69e7813f5117e441b3921b8ed051922a8de020da8b4d35f0"
+url = "https://github.com/dhth/omm/releases/download/v0.7.0/omm_0.7.0_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/dhth/omm/releases/assets/368245223"
+
+[tools.omm."platforms.linux-x64-musl"]
+checksum = "sha256:95f6e51ecff1bddc69e7813f5117e441b3921b8ed051922a8de020da8b4d35f0"
+url = "https://github.com/dhth/omm/releases/download/v0.7.0/omm_0.7.0_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/dhth/omm/releases/assets/368245223"
+
+[tools.omm."platforms.macos-arm64"]
+checksum = "sha256:1cf6eaf5dc8c0b09de7c042ba38e12284b66068dc0e28740d436f492247157c1"
+url = "https://github.com/dhth/omm/releases/download/v0.7.0/omm_0.7.0_darwin_arm64.tar.gz"
+url_api = "https://api.github.com/repos/dhth/omm/releases/assets/368245225"
+
+[tools.omm."platforms.macos-x64"]
+checksum = "sha256:6b925a5b9e8fa1eb7ceceded9c404e53affbb302cfc66b40dad2402203e9baa3"
+url = "https://github.com/dhth/omm/releases/download/v0.7.0/omm_0.7.0_darwin_amd64.tar.gz"
+url_api = "https://api.github.com/repos/dhth/omm/releases/assets/368245222"
+
 [[tools.punchout]]
 version = "1.5.0"
 backend = "github:dhth/punchout"
@@ -112,6 +393,113 @@ url_api = "https://api.github.com/repos/dhth/punchout/releases/assets/545773457"
 checksum = "sha256:7afad124df287fcb5f76e8ad74df34e20a774bb2813aa18c85b913674e3d05bd"
 url = "https://github.com/dhth/punchout/releases/download/v1.5.0/punchout_1.5.0_darwin_amd64.tar.gz"
 url_api = "https://api.github.com/repos/dhth/punchout/releases/assets/545773459"
+
+[[tools.tflens]]
+version = "0.1.0-alpha.8"
+backend = "github:dhth/tflens"
+specifiers = ["0.1.0-alpha.8"]
+
+[tools.tflens."platforms.linux-arm64"]
+checksum = "sha256:4206734225c39c9652bafe6e4a9355a54130dc3ab31d0aed7a9cc1f1a6d980a1"
+url = "https://github.com/dhth/tflens/releases/download/v0.1.0-alpha.8/tflens_0.1.0-alpha.8_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/dhth/tflens/releases/assets/601090743"
+provenance = "github-attestations"
+
+[tools.tflens."platforms.linux-arm64-musl"]
+checksum = "sha256:4206734225c39c9652bafe6e4a9355a54130dc3ab31d0aed7a9cc1f1a6d980a1"
+url = "https://github.com/dhth/tflens/releases/download/v0.1.0-alpha.8/tflens_0.1.0-alpha.8_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/dhth/tflens/releases/assets/601090743"
+provenance = "github-attestations"
+
+[tools.tflens."platforms.linux-x64"]
+checksum = "sha256:39f8470d06ec6e8ebfe85e5cb1d496366c82b252dbfd6f6096ef328374f45283"
+url = "https://github.com/dhth/tflens/releases/download/v0.1.0-alpha.8/tflens_0.1.0-alpha.8_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/dhth/tflens/releases/assets/601090745"
+provenance = "github-attestations"
+
+[tools.tflens."platforms.linux-x64-musl"]
+checksum = "sha256:39f8470d06ec6e8ebfe85e5cb1d496366c82b252dbfd6f6096ef328374f45283"
+url = "https://github.com/dhth/tflens/releases/download/v0.1.0-alpha.8/tflens_0.1.0-alpha.8_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/dhth/tflens/releases/assets/601090745"
+provenance = "github-attestations"
+
+[tools.tflens."platforms.macos-arm64"]
+checksum = "sha256:b692a4befe6848c5ce76246f83f62f81e1dc65ecf547d0706c949815100b3ec8"
+url = "https://github.com/dhth/tflens/releases/download/v0.1.0-alpha.8/tflens_0.1.0-alpha.8_darwin_arm64.tar.gz"
+url_api = "https://api.github.com/repos/dhth/tflens/releases/assets/601090752"
+provenance = "github-attestations"
+
+[tools.tflens."platforms.macos-x64"]
+checksum = "sha256:59a96e5ccd1bd25dff71737741904c84bb8c312bb0595118c80b4f24aea21ca5"
+url = "https://github.com/dhth/tflens/releases/download/v0.1.0-alpha.8/tflens_0.1.0-alpha.8_darwin_amd64.tar.gz"
+url_api = "https://api.github.com/repos/dhth/tflens/releases/assets/601090751"
+provenance = "github-attestations"
+
+[[tools.ting]]
+version = "0.1.1"
+backend = "github:dhth/ting"
+specifiers = ["0.1.1"]
+
+[tools.ting."platforms.linux-x64"]
+checksum = "sha256:d38d06f7729494a05b8603e87451ba06333377888eeb693481918ab8e9f48f80"
+url = "https://github.com/dhth/ting/releases/download/v0.1.1/ting-x86_64-unknown-linux-gnu.tar.xz"
+url_api = "https://api.github.com/repos/dhth/ting/releases/assets/421304139"
+
+[tools.ting."platforms.linux-x64-musl"]
+checksum = "sha256:d38d06f7729494a05b8603e87451ba06333377888eeb693481918ab8e9f48f80"
+url = "https://github.com/dhth/ting/releases/download/v0.1.1/ting-x86_64-unknown-linux-gnu.tar.xz"
+url_api = "https://api.github.com/repos/dhth/ting/releases/assets/421304139"
+
+[tools.ting."platforms.macos-arm64"]
+checksum = "sha256:79fc577369fa31e92ea649d9c3b8b11239c8969a489fd0faed6d3f4d39963bc8"
+url = "https://github.com/dhth/ting/releases/download/v0.1.1/ting-aarch64-apple-darwin.tar.xz"
+url_api = "https://api.github.com/repos/dhth/ting/releases/assets/421304127"
+
+[tools.ting."platforms.macos-x64"]
+checksum = "sha256:b13bee21ac5216a05891d0e7acf0652c31dd15387b36341a87f5e55e3eb6ecaa"
+url = "https://github.com/dhth/ting/releases/download/v0.1.1/ting-x86_64-apple-darwin.tar.xz"
+url_api = "https://api.github.com/repos/dhth/ting/releases/assets/421304136"
+
+[[tools.unreleased]]
+version = "0.1.1"
+backend = "github:dhth/unreleased"
+specifiers = ["0.1.1"]
+
+[tools.unreleased."platforms.linux-arm64"]
+checksum = "sha256:0e797e15776170a595b657646a0c8cd50131d91ba783722d4b3308df27de67d5"
+url = "https://github.com/dhth/unreleased/releases/download/v0.1.1/unreleased-aarch64-unknown-linux-gnu.tar.xz"
+url_api = "https://api.github.com/repos/dhth/unreleased/releases/assets/421327855"
+provenance = "github-attestations"
+
+[tools.unreleased."platforms.linux-arm64-musl"]
+checksum = "sha256:0e797e15776170a595b657646a0c8cd50131d91ba783722d4b3308df27de67d5"
+url = "https://github.com/dhth/unreleased/releases/download/v0.1.1/unreleased-aarch64-unknown-linux-gnu.tar.xz"
+url_api = "https://api.github.com/repos/dhth/unreleased/releases/assets/421327855"
+provenance = "github-attestations"
+
+[tools.unreleased."platforms.linux-x64"]
+checksum = "sha256:ab4a18f27edf07c54180f04cf5400859df7e6f917a21d886f7a8c4480d884314"
+url = "https://github.com/dhth/unreleased/releases/download/v0.1.1/unreleased-x86_64-unknown-linux-gnu.tar.xz"
+url_api = "https://api.github.com/repos/dhth/unreleased/releases/assets/421327861"
+provenance = "github-attestations"
+
+[tools.unreleased."platforms.linux-x64-musl"]
+checksum = "sha256:ab4a18f27edf07c54180f04cf5400859df7e6f917a21d886f7a8c4480d884314"
+url = "https://github.com/dhth/unreleased/releases/download/v0.1.1/unreleased-x86_64-unknown-linux-gnu.tar.xz"
+url_api = "https://api.github.com/repos/dhth/unreleased/releases/assets/421327861"
+provenance = "github-attestations"
+
+[tools.unreleased."platforms.macos-arm64"]
+checksum = "sha256:4c1de6c727c94d1e0da39ebc6a660d03576c4ae126a399d1f54aa3b10a7a96e2"
+url = "https://github.com/dhth/unreleased/releases/download/v0.1.1/unreleased-aarch64-apple-darwin.tar.xz"
+url_api = "https://api.github.com/repos/dhth/unreleased/releases/assets/421327849"
+provenance = "github-attestations"
+
+[tools.unreleased."platforms.macos-x64"]
+checksum = "sha256:f17b935e4e10ebec8dff179502ce55292b6d682092dc4608c414499a5d128d80"
+url = "https://github.com/dhth/unreleased/releases/download/v0.1.1/unreleased-x86_64-apple-darwin.tar.xz"
+url_api = "https://api.github.com/repos/dhth/unreleased/releases/assets/421327858"
+provenance = "github-attestations"
 
 [[tools.yamlfmt]]
 version = "0.21.0"
