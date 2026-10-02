@@ -1,0 +1,60 @@
+name: check
+
+on:
+  workflow_dispatch:
+    inputs:
+      tool:
+        description: Tool to check
+        type: choice
+        default: all
+        options:
+          - all
+          - envee
+          - punchout
+
+permissions:
+  contents: read
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      tools: ${{ steps.resolve.outputs.tools }}
+    steps:
+      - uses: actions/checkout@v7
+      - name: Set up mise
+        uses: jdx/mise-action@v5
+        with:
+          install: false
+      - name: Resolve tools
+        id: resolve
+        shell: bash
+        env:
+          TOOL: ${{ inputs.tool }}
+        run: |
+          tools="$(mise run resolve "$TOOL" | jq -Rnc '[inputs]')"
+          echo "tools=$tools" >> "$GITHUB_OUTPUT"
+
+  check:
+    needs: plan
+    name: ${{ matrix.tool }} / ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        tool: ${{ fromJSON(needs.plan.outputs.tools) }}
+        os: [ubuntu-latest, ubuntu-24.04-arm, ubuntu-22.04, ubuntu-22.04-arm, macos-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+      - name: Install ${{ matrix.tool }}
+        uses: jdx/mise-action@v5
+        with:
+          install_args: ${{ matrix.tool }}
+          cache: false
+      - name: Run ${{ matrix.tool }} --help
+        shell: bash
+        env:
+          TOOL: ${{ matrix.tool }}
+        run: |
+          "$TOOL" --help </dev/null

@@ -1,0 +1,28 @@
+min_version = "2026.9.17"
+
+[settings]
+task.run_auto_install = false
+
+[tools]
+actionlint = "latest"
+envee = "0.1.0-alpha.2"
+punchout = "1.5.0"
+yamlfmt = "latest"
+
+[tool_alias]
+envee = "github:dhth/envee"
+punchout = "github:dhth/punchout"
+
+[tasks."lint:actions"]
+description = "Lint GitHub Actions workflows"
+run = "actionlint"
+
+[tasks."lint:yaml"]
+description = "Lint YAML files"
+run = '''
+yamlfmt \
+    -lint \
+    -quiet \
+    -formatter 'retain_line_breaks_single=true' \
+    $(git ls-files '*.yml' '*.yaml')
+'''

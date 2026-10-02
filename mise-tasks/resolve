@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#MISE description="Resolve a tool name (or 'all') to the tools to check, one per line"
+#MISE alias="r"
+#USAGE arg "<tool>" help="Tool name, or 'all'"
+set -euo pipefail
+
+tool="${usage_tool?}"
+
+for t in $(mise ls --local --json | jq -r 'keys[]'); do
+    if [[ "$(mise tool "$t" --backend)" == github:dhth/* ]]; then
+        echo "$t"
+    fi
+done | if [[ "$tool" == "all" ]]; then cat; else grep -xF -- "$tool"; fi || {
+    echo "'$tool' is not a github:dhth/* tool in mise.toml" >&2
+    exit 1
+}
