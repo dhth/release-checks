@@ -21,6 +21,7 @@ unreleased = "0.1.1"
 
 # repo tools
 actionlint = "latest"
+shellcheck = "latest"
 yamlfmt = "latest"
 
 [tool_alias]
@@ -41,6 +42,10 @@ unreleased = "github:dhth/unreleased"
 [tasks."lint:actions"]
 description = "Lint GitHub Actions workflows"
 run = "actionlint"
+
+[tasks."lint:shell"]
+description = "Lint shell scripts"
+run = "shellcheck mise-tasks/*"
 
 [tasks."lint:yaml"]
 description = "Lint YAML files"
