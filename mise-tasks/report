@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+#MISE description="Print a Markdown table of check results for a workflow run"
+#USAGE arg "<run_id>" help="Workflow run ID"
+set -euo pipefail
+
+# Relies on check jobs being named "<tool> / <os>" (see check.yml).
+gh api --paginate "repos/{owner}/{repo}/actions/runs/${usage_run_id?}/jobs" \
+    --jq '.jobs[] | select(.name | contains(" / "))' |
+    jq -rs '
+    def icon:
+        {success: "✅", failure: "❌", cancelled: "🚫", timed_out: "⏱️", skipped: "⏭️"}[.conclusion // ""] // "⏳";
+    map((.name | split(" / ")) as [$tool, $os] | {$tool, $os, cell: "[\(icon)](\(.html_url))"})
+    | INDEX("\(.tool)/\(.os)") as $cells
+    | (map(.os) | unique) as $oses
+    | "| tool | \($oses | join(" | ")) |",
+      "|---|\($oses | map("---") | join("|"))|",
+      (map(.tool) | unique[] as $t
+        | "| \($t) | \([$oses[] | $cells["\($t)/\(.)"].cell // "—"] | join(" | ")) |")
+    '

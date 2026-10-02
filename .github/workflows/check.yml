@@ -48,6 +48,7 @@ jobs:
 
   check:
     needs: plan
+    # mise-tasks/report parses this "<tool> / <os>" format
     name: ${{ matrix.tool }} / ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -75,3 +76,24 @@ jobs:
           TOOL: ${{ matrix.tool }}
         run: |
           "$TOOL" --help </dev/null
+
+  report:
+    needs: [plan, check]
+    if: ${{ !cancelled() && needs.plan.result == 'success' }}
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+    steps:
+      - uses: actions/checkout@v7
+      - name: Set up mise
+        uses: jdx/mise-action@v5
+        with:
+          install: false
+      - name: Write summary
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          mise run report "$GITHUB_RUN_ID" >> "$GITHUB_STEP_SUMMARY"
